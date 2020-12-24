@@ -8,7 +8,7 @@ docker-push warddejager/multi-worker:latest
 
 docker push warddejager/multi-client:$SHA
 docker push warddejager/multi-server:$SHA
-docker-push warddejager/multi-worker:$SHA
+docker push warddejager/multi-worker:$SHA
 
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=warddejager/multi-server:$SHA
